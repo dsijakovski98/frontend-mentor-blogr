@@ -47,6 +47,7 @@ h6 {
 }
 
 p,
+a,
 input,
 button,
 textarea,
@@ -64,8 +65,8 @@ select {
   --light-red: hsl(355, 100%, 74%);
   --dark-blue: hsl(208, 49%, 24%);
 
-  --neutral-white: hsl(0, 0%, 100%);
-  --neutral-gray: hsl(240, 2%, 79%);
-  --neutral-dark-gray: hsl(207, 13%, 34%);
-  --neutral-dark: hsl(240, 10%, 16%);
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(240, 2%, 79%);
+  --dark-gray: hsl(207, 13%, 34%);
+  --dark: hsl(240, 10%, 16%);
 }

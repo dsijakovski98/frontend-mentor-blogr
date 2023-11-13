@@ -1,0 +1,57 @@
+header {
+  background: linear-gradient(to right, var(--light-red), var(--red));
+  border-bottom-left-radius: 5rem;
+
+  padding-top: 2rem;
+  padding-bottom: 8rem;
+
+  color: var(--white);
+}
+
+header nav {
+  display: flex;
+  margin-bottom: 4.5rem;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  list-style: none;
+}
+
+header ul.page-links {
+  flex: 1;
+}
+
+header a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+header h1 {
+  margin-right: 3rem;
+
+  font-size: 2.5rem;
+}
+
+.cta {
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: 3.2rem;
+  font-weight: 500;
+
+  line-height: 1.85;
+}
+
+.cta p {
+  margin-bottom: 3rem;
+  font-size: 1.1rem;
+}
+
+.cta a {
+  margin: 0 0.5rem;
+}
