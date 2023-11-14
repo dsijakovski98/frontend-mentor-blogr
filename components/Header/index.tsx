@@ -4,6 +4,7 @@ import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
 import LinkButton from '@/components/LinkButton'
+import NavLink from '@/components/NavLink'
 
 import logo from 'public/assets/images/logo.svg'
 
@@ -20,9 +21,7 @@ const Header = () => {
 
           <ul className='page-links'>
             {LINKS.map((link) => (
-              <li key={link.label}>
-                <Link href='#'>{link.label}</Link>
-              </li>
+              <NavLink key={link.label} link={link} href='#' />
             ))}
           </ul>
 

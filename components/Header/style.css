@@ -28,13 +28,13 @@ header::before {
 header nav {
   display: flex;
 
-  margin-bottom: 7.5rem;
+  margin-bottom: 6rem;
 }
 
 header ul {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1rem;
 
   list-style: none;
 }
@@ -45,6 +45,8 @@ header ul.page-links {
 
 header ul.auth-links {
   gap: 2rem;
+
+  padding-bottom: 1rem;
 }
 
 header a {

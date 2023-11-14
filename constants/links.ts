@@ -1,27 +1,21 @@
-export type PageLink = {
+export type NavLinkType = {
   label: string
-  children?: string[]
+  options?: string[]
 }
 
-export const LINKS: PageLink[] = [
+export const LINKS: NavLinkType[] = [
   {
     label: 'Product',
-    children: [
-      'Overview',
-      'Pricing',
-      'Marketplace',
-      'Features',
-      'Integrations',
-    ],
+    options: ['Overview', 'Pricing', 'Marketplace', 'Features', 'Integrations'],
   },
 
   {
     label: 'Company',
-    children: ['About', 'Team', 'Blog', 'Careers'],
+    options: ['About', 'Team', 'Blog', 'Careers'],
   },
 
   {
     label: 'Connect',
-    children: ['Contact', 'Newsletter', 'LinkedIn'],
+    options: ['Contact', 'Newsletter', 'LinkedIn'],
   },
 ]
