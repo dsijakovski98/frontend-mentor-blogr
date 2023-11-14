@@ -3,6 +3,7 @@ import { LINKS } from '@constants/links'
 import Link from 'next/link'
 import React from 'react'
 import Image from 'next/image'
+import LinkButton from '@/components/LinkButton'
 
 import logo from 'public/assets/images/logo.svg'
 
@@ -25,12 +26,14 @@ const Header = () => {
             ))}
           </ul>
 
-          <ul>
+          <ul className='auth-links'>
             <li>
               <Link href='#'>Login</Link>
             </li>
             <li>
-              <Link href='#'>Sign Up</Link>
+              <LinkButton href='#' size='lg'>
+                Sign Up
+              </LinkButton>
             </li>
           </ul>
         </nav>
@@ -40,8 +43,10 @@ const Header = () => {
           <p>Grow your audience and build your online brand</p>
 
           <div className='actions'>
-            <Link href='#'>Start for Free</Link>
-            <Link href='#'>Learn More</Link>
+            <LinkButton href='#'>Start for Free</LinkButton>
+            <LinkButton href='#' variant='outlined'>
+              Learn More
+            </LinkButton>
           </div>
         </div>
       </Container>

@@ -1,0 +1,40 @@
+.btn {
+  border-radius: 100dvh;
+
+  font-weight: 600;
+
+  transition: all 250ms;
+}
+
+.btn.md {
+  padding: 0.8rem 1.15rem;
+}
+
+.btn.lg {
+  padding: 0.8rem 2.5rem;
+}
+
+/* No styles for text variant (for now) */
+
+.btn.outlined,
+.btn.contained {
+  border: 1px solid var(--white);
+}
+
+.btn.outlined:hover,
+.btn.outlined:focus {
+  background-color: var(--white);
+  color: var(--light-red);
+}
+
+.btn.contained {
+  background-color: white;
+  color: var(--red);
+}
+
+.btn.contained:hover,
+.btn.contained:focus {
+  border-color: transparent;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--white);
+}

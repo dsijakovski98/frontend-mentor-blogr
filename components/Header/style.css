@@ -2,10 +2,10 @@ header {
   position: relative;
 
   background: var(--header-gradient);
-  border-bottom-left-radius: 5rem;
+  border-bottom-left-radius: 6.5rem;
 
   padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding-bottom: 11rem;
 
   color: var(--white);
 
@@ -28,7 +28,7 @@ header::before {
 header nav {
   display: flex;
 
-  margin-bottom: 7rem;
+  margin-bottom: 7.5rem;
 }
 
 header ul {
@@ -43,6 +43,10 @@ header ul.page-links {
   flex: 1;
 }
 
+header ul.auth-links {
+  gap: 2rem;
+}
+
 header a {
   color: var(--white);
   text-decoration: none;
@@ -51,7 +55,7 @@ header a {
 }
 
 header .logo {
-  margin-right: 3.5rem;
+  margin-right: 4rem;
 }
 
 .cta {
@@ -64,7 +68,7 @@ header .logo {
 }
 
 .cta p {
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
   font-size: 1.3rem;
 }
 
