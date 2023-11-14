@@ -46,7 +46,6 @@ h6 {
   font-family: var(--font-overpass);
 }
 
-p,
 a,
 input,
 button,
@@ -69,4 +68,10 @@ select {
   --gray: hsl(240, 2%, 79%);
   --dark-gray: hsl(207, 13%, 34%);
   --dark: hsl(240, 10%, 16%);
+
+  --header-gradient: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
 }

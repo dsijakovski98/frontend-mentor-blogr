@@ -2,6 +2,9 @@ import Container from '@/components/Container'
 import { LINKS } from '@constants/links'
 import Link from 'next/link'
 import React from 'react'
+import Image from 'next/image'
+
+import logo from 'public/assets/images/logo.svg'
 
 import './style.css'
 
@@ -10,9 +13,9 @@ const Header = () => {
     <header>
       <Container>
         <nav>
-          <h1>
-            <Link href='/'>Blogr</Link>
-          </h1>
+          <Link href='/' className='logo'>
+            <Image src={logo} width={100} height={40} alt='Blogr logo.' />
+          </Link>
 
           <ul className='page-links'>
             {LINKS.map((link) => (
@@ -33,7 +36,7 @@ const Header = () => {
         </nav>
 
         <div className='cta'>
-          <h2>A modern publishing platform</h2>
+          <h1>A modern publishing platform</h1>
           <p>Grow your audience and build your online brand</p>
 
           <div className='actions'>

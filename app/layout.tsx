@@ -26,10 +26,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en'>
-      <body className={`${overpass.className} ${ubuntu.className}`}>
-        {children}
-      </body>
+    <html lang='en' className={`${overpass.variable} ${ubuntu.variable}`}>
+      <body>{children}</body>
     </html>
   )
 }
