@@ -5,5 +5,18 @@
   "singleQuote": true,
   "jsxSingleQuote": true,
 
-  "semi": false
+  "semi": false,
+
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^react",
+    "^next",
+    "<THIRD_PARTY_MODULES>",
+    "^@/components",
+    "^@/constants",
+    "^public",
+    ".css$"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true
 }

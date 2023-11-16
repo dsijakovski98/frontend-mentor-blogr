@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Overpass, Ubuntu } from 'next/font/google'
+
 import '@/styles/globals.css'
 
 const overpass = Overpass({

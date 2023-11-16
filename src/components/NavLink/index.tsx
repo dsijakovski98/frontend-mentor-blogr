@@ -1,7 +1,9 @@
-import { NavLinkType } from '@constants/links'
+import React from 'react'
+
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+
+import { NavLinkType } from '@/constants/links'
 
 import arrow from 'public/assets/images/icon-arrow-light.svg'
 

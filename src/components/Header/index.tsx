@@ -1,8 +1,11 @@
-import Container from '@/components/Container'
-import { LINKS } from '@constants/links'
-import Link from 'next/link'
 import React from 'react'
+
 import Image from 'next/image'
+import Link from 'next/link'
+
+import { LINKS } from '@constants/links'
+
+import Container from '@/components/Container'
 import LinkButton from '@/components/LinkButton'
 import NavLink from '@/components/NavLink'
 

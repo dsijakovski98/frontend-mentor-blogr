@@ -1,5 +1,7 @@
-import Link from 'next/link'
 import React, { PropsWithChildren } from 'react'
+
+import Link from 'next/link'
+
 import { LinkButtonVariant } from 'types'
 
 import './style.css'
