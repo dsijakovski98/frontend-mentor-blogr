@@ -2,12 +2,17 @@ header {
   position: relative;
   border-bottom-left-radius: 6.5rem;
 
-  background: var(--header-gradient);
+  background: linear-gradient(
+    to right,
+    var(--header-gradient-light-red),
+    var(--header-gradient-red)
+  );
 
   isolation: isolate;
 
   padding-top: 4rem;
   padding-bottom: 11rem;
+  overflow: hidden;
 
   color: var(--white);
 }
@@ -28,6 +33,16 @@ header nav {
   display: flex;
 
   margin-bottom: 6rem;
+}
+
+header button {
+  display: none;
+}
+
+header .links {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
 }
 
 header ul {
@@ -75,4 +90,55 @@ header .logo {
 
 .cta a {
   margin: 0 0.5rem;
+}
+
+@media screen and (max-width: 860px) {
+  header {
+    background: linear-gradient(
+      to bottom,
+      var(--header-gradient-light-red),
+      var(--header-gradient-red)
+    );
+  }
+
+  header::before {
+    position: absolute;
+
+    z-index: -1;
+    inset: 0;
+
+    background: url(/assets/images/bg-pattern-intro-mobile.svg);
+    background-position: 35% 33%;
+    background-repeat: no-repeat;
+    content: '';
+  }
+
+  header nav {
+    justify-content: space-between;
+  }
+
+  header button {
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+
+    width: 40px;
+  }
+
+  header button img {
+    object-fit: contain;
+  }
+
+  /* TODO: Add nav menu styles */
+  header .links {
+    display: none;
+  }
+
+  .cta h1 {
+    font-size: 2.5rem;
+    text-wrap: balance;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
 }

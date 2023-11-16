@@ -9,6 +9,7 @@ import NavLink from '@/components/NavLink'
 
 import { LINKS } from '@/constants/links'
 
+import burger from 'public/assets/images/icon-hamburger.svg'
 import logo from 'public/assets/images/logo.svg'
 
 import './style.css'
@@ -19,25 +20,37 @@ const Header = () => {
       <Container>
         <nav>
           <Link href='/' className='logo'>
-            <Image src={logo} width={100} height={40} alt='Blogr logo.' />
+            <Image
+              src={logo}
+              width={100}
+              height={40}
+              alt='Blogr logo'
+              priority
+            />
           </Link>
 
-          <ul className='page-links'>
-            {LINKS.map((link) => (
-              <NavLink key={link.label} link={link} href='#' />
-            ))}
-          </ul>
+          <button>
+            <Image src={burger} fill alt='Burger menu icon' priority />
+          </button>
 
-          <ul className='auth-links'>
-            <li>
-              <Link href='#'>Login</Link>
-            </li>
-            <li>
-              <LinkButton href='#' size='lg'>
-                Sign Up
-              </LinkButton>
-            </li>
-          </ul>
+          <div className='links'>
+            <ul className='page-links'>
+              {LINKS.map((link) => (
+                <NavLink key={link.label} link={link} href='#' />
+              ))}
+            </ul>
+
+            <ul className='auth-links'>
+              <li>
+                <Link href='#'>Login</Link>
+              </li>
+              <li>
+                <LinkButton href='#' size='lg'>
+                  Sign Up
+                </LinkButton>
+              </li>
+            </ul>
+          </div>
         </nav>
 
         <div className='cta'>
