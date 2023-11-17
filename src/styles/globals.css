@@ -67,10 +67,11 @@ select {
   --dark-blue: hsl(208, 49%, 24%);
 
   --white: hsl(0, 0%, 100%);
+  --light-gray: hsl(210, 13%, 94%);
   --gray: hsl(240, 2%, 79%);
   --dark-gray: hsl(207, 13%, 34%);
   --dark: hsl(240, 10%, 16%);
 
-  --header-gradient-light-red: hsl(13, 100%, 72%);
-  --header-gradient-red: hsl(353, 100%, 62%);
+  --gradient-light-red: hsl(13, 100%, 72%);
+  --gradient-red: hsl(353, 100%, 62%);
 }

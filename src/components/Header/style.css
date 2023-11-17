@@ -1,20 +1,20 @@
 header {
   position: relative;
+
+  margin-bottom: 20dvh;
+
   border-bottom-left-radius: 6.5rem;
 
   background: linear-gradient(
     to right,
-    var(--header-gradient-light-red),
-    var(--header-gradient-red)
+    var(--gradient-light-red),
+    var(--gradient-red)
   );
 
   isolation: isolate;
 
   padding-top: 4rem;
   padding-bottom: 11rem;
-  overflow: hidden;
-
-  color: var(--white);
 }
 
 header::before {
@@ -22,6 +22,8 @@ header::before {
 
   z-index: -1;
   inset: 0;
+
+  border-bottom-left-radius: inherit;
 
   background: url(/assets/images/bg-pattern-intro-desktop.svg);
   background-position: 25% 52%;
@@ -37,6 +39,7 @@ header nav {
 
 header button {
   display: none;
+  position: relative;
 }
 
 header .links {
@@ -75,6 +78,7 @@ header .logo {
 }
 
 .cta {
+  color: var(--white);
   text-align: center;
 }
 
@@ -96,9 +100,11 @@ header .logo {
   header {
     background: linear-gradient(
       to bottom,
-      var(--header-gradient-light-red),
-      var(--header-gradient-red)
+      var(--gradient-light-red),
+      var(--gradient-red)
     );
+
+    padding-bottom: 9rem;
   }
 
   header::before {
@@ -113,26 +119,77 @@ header .logo {
     content: '';
   }
 
+  header a {
+    font-size: 18px;
+  }
+
   header nav {
     justify-content: space-between;
   }
 
+  header ul {
+    flex-direction: column;
+  }
+
   header button {
     display: block;
-    position: relative;
     border: none;
     background: transparent;
 
-    width: 40px;
+    width: 30px;
   }
 
   header button img {
     object-fit: contain;
   }
 
-  /* TODO: Add nav menu styles */
   header .links {
-    display: none;
+    position: absolute;
+    top: 8rem;
+    left: 100dvw;
+    flex-direction: column;
+
+    transform: translateY(-1rem);
+    opacity: 0;
+    transition:
+      opacity 150ms ease-in,
+      transform 250ms ease-in;
+    box-shadow: 0 1rem 5rem -1rem var(--dark);
+    border-radius: 6px;
+
+    background: var(--white);
+
+    padding: 2rem 1rem;
+    pointer-events: none;
+  }
+
+  header .links[aria-hidden='false'] {
+    transform: translateY(0);
+    opacity: 1;
+    inset-inline: 2rem;
+    pointer-events: all;
+  }
+
+  header ul.page-links {
+    border-bottom: 1px solid var(--gray);
+    padding-bottom: 1rem;
+  }
+
+  header ul.auth-links {
+    padding-top: 2rem;
+  }
+
+  header ul.auth-links a {
+    color: var(--dark);
+  }
+
+  header ul.auth-links .btn {
+    background: linear-gradient(
+      to right,
+      var(--gradient-light-red),
+      var(--gradient-red)
+    );
+    color: var(--white);
   }
 
   .cta h1 {

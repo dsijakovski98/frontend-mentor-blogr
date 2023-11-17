@@ -23,7 +23,7 @@ const NavLink = (props: Props) => {
       <div className='anchor'>
         <Link href={href}>{label}</Link>
         {options && (
-          <Image src={arrow} width={10} height={7} alt='Arrow icon' />
+          <Image src={arrow} width={10} height={7} alt='Arrow icon' priority />
         )}
       </div>
 

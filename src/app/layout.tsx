@@ -7,6 +7,7 @@ const overpass = Overpass({
   subsets: ['latin'],
   weight: ['300', '600'],
   variable: '--font-overpass',
+  preload: true,
 })
 
 const ubuntu = Ubuntu({

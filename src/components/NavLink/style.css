@@ -47,7 +47,8 @@
   text-decoration: underline;
 }
 
-.nav-link:hover .options {
+.nav-link:hover .options,
+.nav-link:focus .options {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -56,4 +57,56 @@
 
 .nav-link:hover img {
   transform: rotate(180deg);
+}
+
+@media screen and (max-width: 860px) {
+  .nav-link {
+    width: 100%;
+  }
+
+  .anchor {
+    justify-content: center;
+  }
+
+  .anchor a {
+    color: var(--dark);
+    font-weight: 600;
+  }
+
+  .anchor img {
+    filter: brightness(0.5);
+  }
+
+  .options {
+    position: static;
+
+    transform: unset;
+    margin-top: 1rem;
+    box-shadow: none;
+
+    background-color: var(--light-gray);
+    padding: 2rem;
+    overflow: hidden;
+  }
+
+  /* TODO: Implement grid auto height transition */
+  .options a {
+    filter: brightness(0.5);
+    color: var(--gray);
+    font-weight: 600;
+    font-family: var(--font-overpass);
+  }
+
+  .nav-link:hover .options,
+  .nav-link:focus .options {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-link:hover .anchor a,
+  .nav-link:focus .anchor a {
+    filter: brightness(0.5);
+    color: var(--gray);
+    text-decoration: none;
+  }
 }
